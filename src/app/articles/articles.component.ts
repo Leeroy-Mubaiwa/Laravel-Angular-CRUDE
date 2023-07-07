@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../services/article.service';
 
 @Component({
@@ -7,21 +7,30 @@ import { ArticleService } from '../services/article.service';
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent implements OnInit{
+  articles:any ;
+
 
   constructor( private articleService: ArticleService ) { }
+  ngOnInit(): void {
 
-  articles:any = [];
 
-  ngonInit(): void {}
+      this.showArticles();
+
+  }
+
+
 
   showArticles(){
       this.articleService.listArticles().subscribe(
-       article=>{
+       (article)=>{
 
         this.articles = article;
-         console.log(article);
+         console.log(this.articles);
        }
       );
+
+
+
   }
 
 

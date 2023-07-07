@@ -9,13 +9,15 @@ import { HttpClient } from '@angular/common/http';
 export class ArticleService {
 
 
-  url:string = "http://localhost:8000/";
+  url:string = "http://127.0.0.1:8000/";
 
   constructor( private http: HttpClient ) {
 
    }
 
    listArticles(){
+
+    console.log("listArticles() called");
       return this.http.get<any>(this.url + "api/articles");
    }
 }
