@@ -1,1 +1,26 @@
 <p>articles works!</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>body</th>
+      <th>author</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="articles.length">
+    <tr *ngFor="let article of articles">
+      <td>{{article.title}}</td>
+      <td>{{article.body}}</td>
+      <td>{{article.author}}</td>
+    </tr>
+</table>
+
+
+<div>
+
+  <ul *ngFor="let article of articles">
+    <li>{{article.title}} {{article.body}} {{article.author}} </li>
+  </ul>
+
+</div>
