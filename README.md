@@ -1,27 +1,49 @@
-# Frontend
+# Articles Application Using Angular and Laravel by LEEROY MUBAIWA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+This is a project that integrates Angular and Laravel to create an articles application that allows users to perform all CRUD (Create, Read, Update, Delete) operations on articles.
 
-## Development server
+## Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To run this project, you will need to have the following installed on your system:
 
-## Code scaffolding
+- PHP >= 7.3
+- MySQL >= 5.7
+- Composer
+- Node.js >= 12.0
+- Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+To get started, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository to your local machine.
+2. Open a terminal and navigate to the root directory of the project.
+3. Run `composer install` to install the PHP dependencies.
+4. Create a new MySQL database for the project.
+5. Copy the `.env.example` file and rename it to `.env`.
+6. Update the database configuration in the `.env` file with your MySQL credentials.
+7. Run `php artisan key:generate` to generate a new application key.
+8. Run `php artisan migrate` to run the database migrations.
+9. Run `npm install` to install the front-end dependencies.
+10. Run `ng serve` to start the Angular development server.
+11. In a separate terminal window, run `php artisan serve` to start the Laravel development server.
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Once the installation is complete, you can access the application by visiting `http://localhost:4200` in your web browser.
 
-## Running end-to-end tests
+The application allows users to:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- View a list of all articles
+- View a single article
+- Create a new article
+- Edit an existing article
+- Delete an article
 
-## Further help
+## Folder Structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The project follows a standard Laravel folder structure, with the Angular front-end code located in the `resources/angular` directory. The front-end code is built using the Angular CLI, and the resulting files are stored in the `public` directory.
+
+## Conclusion
+
+This project demonstrates how to integrate Angular and Laravel to create a full-featured articles application. With this application, users can perform all CRUD operations on articles, making it a great starting point for building more complex applications.
