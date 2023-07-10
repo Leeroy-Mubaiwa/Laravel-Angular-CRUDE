@@ -2,14 +2,20 @@
   <div class="card-body">
   <h1>Article Using  Angular</h1>
   </div>
+
+  <div class="card-footer">
+<button class="btn btn-primary" type="button">Add New Article</button>
+  </div>
 </div>
 
-<table class="table">
+
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>title</th>
       <th>body</th>
       <th>author</th>
+      <th>action</th>
     </tr>
   </thead>
   <tbody *ngIf="articles.length">
@@ -17,6 +23,10 @@
       <td>{{article.title}}</td>
       <td>{{article.body}}</td>
       <td>{{article.author}}</td>
+      <td>
+        <button class="btn btn-primary btn-sm" type="button" >Edit</button>
+        <button class="btn btn-danger btn-sm" type="button">Delete</button>
+      </td>
     </tr>
 </table>
 
